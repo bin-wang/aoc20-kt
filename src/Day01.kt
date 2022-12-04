@@ -17,7 +17,7 @@ fun main() {
 
     fun part1(input: List<String>): Int {
         val expenses = input.map(Integer::parseInt).sorted()
-        return findProductWithSum(expenses, 2020) ?: throw AssertionError("Solution not found")
+        return findProductWithSum(expenses, 2020) ?: error("No solution found")
     }
 
     fun part2(input: List<String>): Int {
@@ -28,7 +28,7 @@ fun main() {
                 return product * v
             }
         }
-        throw AssertionError("No solution found")
+        error("No solution found")
     }
 
     // test if implementation meets criteria from the description, like:
